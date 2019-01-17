@@ -1,0 +1,17 @@
+---
+- name: install some system dependecies
+  apt:
+    name: "{{ deps_list }}"
+    state: present
+
+- name: install software from repository
+  tags: soft
+  apt:
+    name: "{{ install_list }}"
+    state: latest
+
+- name: install ruby gems
+  gem:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ gem_list }}"

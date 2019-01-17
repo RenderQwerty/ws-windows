@@ -1,0 +1,10 @@
+- src: geerlingguy.pip
+- src: geerlingguy.docker
+- src: andrewrothstein.docker-machine
+- src: geerlingguy.ansible-role-packer 
+- src: andrewrothstein.terraform
+- src: geerlingguy.ntp
+- src: gantsign.oh-my-zsh
+- src: renderqwerty.ansible_galaxy_hadolint
+- src: andrewrothstein.go
+- src: andrewrothstein.kubernetes-helm

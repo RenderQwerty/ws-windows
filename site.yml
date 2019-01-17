@@ -1,0 +1,19 @@
+---
+
+- name: run the playbook tasks on the localhost
+  hosts: localhost
+  connection: local
+  become: yes
+  vars_files: [ 'roles/desktop/vars/personal.yml' ]
+
+  roles:
+    - geerlingguy.pip
+    - geerlingguy.ntp
+    - geerlingguy.ansible-role-packer 
+    - andrewrothstein.terraform
+    - andrewrothstein.kubernetes-helm
+    - geerlingguy.docker 
+    - andrewrothstein.docker-machine
+    - desktop
+    - gantsign.oh-my-zsh 
+    - andrewrothstein.go

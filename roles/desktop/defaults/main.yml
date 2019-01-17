@@ -1,0 +1,85 @@
+---
+
+tflint: 'https://github.com/wata727/tflint/releases/download/v0.7.2/tflint_linux_amd64.zip'
+
+packer_version: 1.3.3
+vagrant_version: 2.2.2
+
+gem_list:
+  - travis
+  - bropages
+
+apt_key_list:
+  - 379CE192D401AB61
+  - EB3E94ADBE1229CF
+  - 1F3045A5DF7587C3
+  - BC012ECBBC24D881
+
+gpg_key_list:
+  - https://packages.cloud.google.com/apt/doc/apt-key.gpg
+
+deb_from_url: []
+
+install_list:
+  - vim
+  - shellcheck
+  - google-cloud-sdk
+  - jq
+  - speedtest-cli
+  - kubectl
+  - lynx
+
+deps_list:
+  - cmake
+  - build-essential
+  - dkms
+  - libgcrypt11-dev
+  - libyajl-dev
+  - libboost-all-dev
+  - libcurl4-openssl-dev
+  - libexpat1-dev
+  - libcppunit-dev
+  - libxml2-dev
+  - binutils-dev
+  - pkg-config
+  - zlib1g-dev
+  - apt-transport-https
+  - ca-certificates
+  - software-properties-common
+  - curl
+  - libstrongswan-extra-plugins
+  - inotify-tools
+  - debhelper
+  - ruby
+  - ruby-dev
+  - sshpass
+  - nfs-common
+  - nfs-kernel-server
+
+repo_list:
+  - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
+  - deb http://apt.kubernetes.io/ kubernetes-xenial main
+
+repo_list_ppa:
+  - ppa:nilarimogard/webupd8
+
+
+pip_install_packages:
+  - name: docker
+  - name: pipenv
+  - name: virtualenv
+  - name: flake8
+  - name: apache-libcloud
+  - name: paramiko
+  - name: PyYAML
+  - name: jinja2
+  - name: cryptography
+  - name: httplib2
+  - name: trytravis
+  - name: ansible-lint
+  - name: pylint
+  - name: molecule
+  - name: pycrypto
+
+#bin_from_url:
+#  - https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kubectl
