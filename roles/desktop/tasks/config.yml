@@ -32,6 +32,7 @@
 - name: populate zsh config
   lineinfile:
     path: "/home/{{ username }}/.zshrc"
+    create: yes
     line: "source <(kubectl completion zsh)"
 
 - name: populate update script
