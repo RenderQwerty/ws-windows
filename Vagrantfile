@@ -16,20 +16,20 @@ Vagrant.configure("2") do |config|
         v.name = "linux_workstation"
         v.memory = 3192
         v.cpus = 2
-    end
+      end
 
     config.vm.box = "ubuntu/bionic64"
     config.vm.hostname = "vm-fisakov"
     config.vm.network "public_network", ip: "192.168.19.76"
     config.vm.provision "shell", inline: "#{bootstrap}", privileged: true
+    config.vm.synced_folder ".", "/vagrant", mount_options: ["dmode=775,fmode=664"]
     config.vm.provision "ansible_local" do |ansible|
         ansible.become = true
         ansible.playbook = "site.yml"
+        ansible.vault_password_file = "credentials/ansible_vault_password"
         ansible.galaxy_role_file = "roles/requirements.yml"
         ansible.galaxy_roles_path = "/etc/ansible/roles"
         ansible.galaxy_command = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path} --force"
- #       ansible.ask_vault_pass  = true https://www.vagrantup.com/docs/provisioning/ansible_common.html
         ansible.limit = 'all,localhost'
       end
-#    config.vm.synced_folder "C:\Users\y.fisakov\", "/share"
   end
