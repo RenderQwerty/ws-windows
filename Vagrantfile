@@ -1,8 +1,3 @@
-#VAGRANT_COMMAND = ARGV[0]
-#if VAGRANT_COMMAND == "ssh"
-#    config.ssh.username = 'jaels'
-#  end
-
 bootstrap = <<SCRIPT
   useradd -m jaels --groups sudo -s /bin/bash
   mkdir /home/jaels/.ssh && curl --silent https://github.com/renderqwerty.keys >> /home/jaels/.ssh/authorized_keys
@@ -29,7 +24,7 @@ Vagrant.configure("2") do |config|
         ansible.vault_password_file = "credentials/ansible_vault_password"
         ansible.galaxy_role_file = "roles/requirements.yml"
         ansible.galaxy_roles_path = "/etc/ansible/roles"
-        ansible.galaxy_command = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path} --force"
+        ansible.galaxy_command = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path}"
         ansible.limit = 'all,localhost'
       end
   end
