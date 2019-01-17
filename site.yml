@@ -9,10 +9,8 @@
   roles:
     - geerlingguy.pip
     - geerlingguy.ntp
-    - geerlingguy.ansible-role-packer 
-    - andrewrothstein.terraform
+    - geerlingguy.docker
     - andrewrothstein.kubernetes-helm
-    - geerlingguy.docker 
     - andrewrothstein.docker-machine
     - desktop
     - gantsign.oh-my-zsh 
