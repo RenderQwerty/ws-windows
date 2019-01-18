@@ -2,6 +2,7 @@ bootstrap = <<SCRIPT
   useradd -m jaels --groups sudo -s /bin/bash
   mkdir /home/jaels/.ssh && curl --silent https://github.com/renderqwerty.keys >> /home/jaels/.ssh/authorized_keys
   echo "%jaels ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/jaels
+  su -c "printf 'cd /home/jaels\nsudo su jaels' >> .bash_profile" -s /bin/sh vagrant
   apt install python-setuptools -y
 SCRIPT
 
