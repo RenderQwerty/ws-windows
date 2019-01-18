@@ -4,7 +4,7 @@
   hosts: localhost
   connection: local
   become: yes
-  vars_files: [ 'roles/desktop/vars/personal.yml' ]
+  vars_files: [ 'roles/guest/vars/personal.yml' ]
 
   roles:
     - geerlingguy.pip
@@ -12,6 +12,6 @@
     - geerlingguy.docker
     - andrewrothstein.kubernetes-helm
     - andrewrothstein.docker-machine
-    - desktop
+    - guest
     - gantsign.oh-my-zsh 
     - andrewrothstein.go
