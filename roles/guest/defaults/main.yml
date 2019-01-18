@@ -41,7 +41,6 @@ deps_list:
   - ca-certificates
   - software-properties-common
   - curl
-  - libstrongswan-extra-plugins
   - inotify-tools
   - debhelper
   - ruby
@@ -69,7 +68,6 @@ pip_install_packages:
   - name: jinja2
   - name: cryptography
   - name: httplib2
-  - name: trytravis
   - name: ansible-lint
   - name: pylint
   - name: molecule

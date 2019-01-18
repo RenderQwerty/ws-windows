@@ -9,3 +9,8 @@
   win_copy:
     src: /home/jaels/.ssh/
     dest: C:\Users\fisak\.ssh
+
+- name: copy gitconfig
+  win_copy:
+    src: /home/jaels/.gitconfig
+    dest: C:\Users\fisak\
