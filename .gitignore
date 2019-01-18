@@ -1,4 +1,4 @@
 .vagrant
 *.log
 credentials/*
-!credentials/dummyfile
+!credentials/ansible_vault_password.example
