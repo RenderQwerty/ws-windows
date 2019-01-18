@@ -1,0 +1,11 @@
+---
+
+- name: Install required software
+  win_chocolatey:
+    name: "{{ item }}"
+  loop: "{{ choco_list }}"
+
+- name: copy ssh keys
+  win_copy:
+    src: /home/jaels/.ssh/
+    dest: C:\Users\fisak\.ssh

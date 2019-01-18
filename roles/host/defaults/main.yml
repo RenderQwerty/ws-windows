@@ -1,0 +1,21 @@
+---
+
+choco_list:
+  - git
+  - vagrant
+  - notepadplusplus
+  - windirstat
+  - slack
+  - telegram
+  - terminals
+  - winscp
+  - 7zip
+  - virtualbox
+  - cmder
+  - clink
+  - lightshot
+  - googlechrome
+  - vscode
+  - qbittorrent
+  - steam
+  - teamviewer

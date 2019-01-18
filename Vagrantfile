@@ -20,13 +20,18 @@ Vagrant.configure("2") do |config|
     config.vm.network "private_network", ip: "172.16.0.2" #this added to be sure that we knows ip of host machine (172.16.0.1)
 #    config.vm.provision "shell", inline: "#{bootstrap}", privileged: true
     config.vm.synced_folder ".", "/vagrant", mount_options: ["dmode=775,fmode=664"]
-    config.vm.provision "ansible_local" do |ansible|
-        ansible.become = true
-        ansible.playbook = "site.yml"
-        ansible.vault_password_file = "credentials/ansible_vault_password"
-        ansible.galaxy_role_file = "roles/requirements.yml"
-        ansible.galaxy_roles_path = "/etc/ansible/roles"
-        ansible.galaxy_command = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path}"
-        ansible.limit = 'all,localhost'
+#    config.vm.provision "ansible_local" do |ansible|
+#        ansible.become = true
+#        ansible.playbook = "guest.yml"
+#        ansible.vault_password_file = "credentials/ansible_vault_password"
+#        ansible.galaxy_role_file = "roles/requirements.yml"
+#        ansible.galaxy_roles_path = "/etc/ansible/roles"
+#        ansible.galaxy_command = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path}"
+#        ansible.limit = 'all,localhost'
+#      end
+      config.vm.provision "ansible_local" do |ansible|
+          ansible.playbook = "host.yml"
+          ansible.inventory_path = "win_inventory"
+          ansible.limit = 'all,localhost'
       end
   end

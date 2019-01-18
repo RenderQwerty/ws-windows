@@ -1,0 +1,6 @@
+---
+
+- name: run the playbook tasks on the localhost
+  hosts: all
+  roles:
+    - host
