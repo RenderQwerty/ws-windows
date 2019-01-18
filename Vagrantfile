@@ -17,7 +17,8 @@ Vagrant.configure("2") do |config|
     config.vm.box = "ubuntu/bionic64"
     config.vm.hostname = "vm-fisakov"
     config.vm.network "public_network", ip: "192.168.19.76"
-    config.vm.provision "shell", inline: "#{bootstrap}", privileged: true
+    config.vm.network "private_network", ip: "172.16.0.2" #this added to be sure that we knows ip of host machine (172.16.0.1)
+#    config.vm.provision "shell", inline: "#{bootstrap}", privileged: true
     config.vm.synced_folder ".", "/vagrant", mount_options: ["dmode=775,fmode=664"]
     config.vm.provision "ansible_local" do |ansible|
         ansible.become = true
