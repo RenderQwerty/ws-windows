@@ -60,6 +60,7 @@ repo_list_ppa:
 pip_install_packages:
   - name: docker
   - name: pipenv
+  - name: pywinrm
   - name: virtualenv
   - name: flake8
   - name: apache-libcloud
