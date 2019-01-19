@@ -6,4 +6,4 @@ This role will install all required tools and utils for hybrid environment devel
 How-to
 ------------
 * Run [this script](./start.txt) in powershell, reboot your pc after
-* Execute `vagrant up` in project dir and see how magick happenes
+* Execute `vagrant up` in project dir and see how magic happenes
