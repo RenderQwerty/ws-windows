@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
       end
       config.vm.provision "ansible_local" do |ansible|
           ansible.playbook = "host.yml"
-          ansible.inventory_path = "win_inventory"
+          ansible.inventory_path = "credentials/win_inventory"
           ansible.limit = 'all,localhost'
       end
   end

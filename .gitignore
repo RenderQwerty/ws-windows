@@ -1,5 +1,5 @@
 .vagrant
 *.log
 credentials/*
-!credentials/ansible_vault_password.example
-win_inventory
+!credentials/*.example
+
