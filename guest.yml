@@ -4,6 +4,7 @@
   hosts: localhost
   connection: local
   become: yes
+#  become_user: jaels
   vars_files: [ 'roles/guest/vars/personal.yml' ]
 
   roles:
