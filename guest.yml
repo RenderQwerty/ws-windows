@@ -8,11 +8,10 @@
   vars_files: [ 'roles/guest/vars/personal.yml' ]
 
   roles:
-    - geerlingguy.pip
     - geerlingguy.ntp
-    - geerlingguy.docker
     - andrewrothstein.kubernetes-helm
-    - andrewrothstein.docker-machine
     - guest
+    - geerlingguy.docker
+    - andrewrothstein.docker-machine
     - gantsign.oh-my-zsh 
     - andrewrothstein.go

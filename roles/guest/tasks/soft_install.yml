@@ -10,3 +10,8 @@
   gem:
     name: "{{ item }}"
   loop: "{{ gem_list }}"
+
+- name: python modules
+  pip:
+    name: "{{ item.name }}"
+  loop: "{{ pip_install_packages }}"

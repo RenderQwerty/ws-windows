@@ -1,4 +1,3 @@
-- src: geerlingguy.pip
 - src: geerlingguy.docker
 - src: andrewrothstein.docker-machine
 - src: geerlingguy.ntp
