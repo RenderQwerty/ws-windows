@@ -1,5 +1,7 @@
 ---
 
+kerberos_domain: ppl33-35.com
+
 gem_list:
   - bropages
 
@@ -48,6 +50,9 @@ deps_list:
   - sshpass
   - nfs-common
   - nfs-kernel-server
+  - python-dev
+  - libkrb5-dev
+  - krb5-user
 
 repo_list:
   - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
@@ -73,6 +78,10 @@ pip_install_packages:
   - name: pylint
   - name: molecule
   - name: pycrypto
+  - name: "pywinrm[kerberos]"
+  - name: "pywinrm[credssp]"
+  - name: "requests-credssp"
+  - name: "requests-kerberos"
 
 #bin_from_url:
 #  - https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kubectl
