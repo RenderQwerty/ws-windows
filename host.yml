@@ -1,6 +1,6 @@
 ---
 
-- name: run the playbook tasks on the localhost
+- name: Provison host machine
   hosts: all
   roles:
     - host
