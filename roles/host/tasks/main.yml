@@ -7,10 +7,10 @@
 
 - name: copy ssh keys
   win_copy:
-    src: /home/jaels/.ssh/
-    dest: C:\Users\fisak\.ssh
+    src: "/home/{{ lin_username }}/.ssh/"
+    dest: "C:\\Users\\{{ win_username }}\\.ssh"
 
 - name: copy gitconfig
   win_copy:
-    src: /home/jaels/.gitconfig
-    dest: C:\Users\fisak\
+    src: "/home/{{ lin_username }}/.gitconfig"
+    dest: "C:\\Users\\{{ username }}\\"

@@ -2,5 +2,8 @@
 
 - name: Provison host machine
   hosts: all
+  vars:
+    win_username: "y.fisakov"
+    lin_username: "jaels"
   roles:
     - host
