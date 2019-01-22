@@ -29,10 +29,10 @@ Vagrant.configure("2") do |config|
         ansible.galaxy_command = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path}"
         ansible.limit = 'all,localhost'
       end
-      config.vm.provision "ansible_local" do |ansible|
-          ansible.playbook = "host.yml"
-          ansible.inventory_path = "credentials/win_inventory"
-          ansible.limit = 'all,localhost'
-          ansible.verbose = true
+      config.vm.provision "ansible_host", type: "ansible_local" do |ansible_host|
+          ansible_host.playbook = "host.yml"
+          ansible_host.inventory_path = "credentials/win_inventory"
+          ansible_host.limit = 'all,localhost'
+          ansible_host.verbose = true
       end
   end
