@@ -7,6 +7,7 @@ Requirements
 ------------
 * [Vagrant](https://www.vagrantup.com/)
 * [VirtualBox](https://www.virtualbox.org/)
+* WinRM should be configured. [This script](https://github.com/ansible/ansible/blob/devel/examples/scripts/ConfigureRemotingForAnsible.ps1) can be used to set up the basics
 
 How-to
 ------------
