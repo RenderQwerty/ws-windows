@@ -1,11 +1,17 @@
 Windows host/Linux guest configuration tool
 =========
-This role will install all required tools and utils for hybrid environment development
+This role will provision all required tools and utils for hybrid environment development.
 
+
+Requirements
+------------
+* [Vagrant](https://www.vagrantup.com/)
+* [VirtualBox](https://www.virtualbox.org/)
 
 How-to
 ------------
-* Run [this script](./start.txt) in powershell, reboot your pc after
-* Execute `vagrant up` in project dir and see how magic happenes
-* Place your ansible-vault password to `credentials/ansible_vault_password`
-* Place your windows login & password to `credentials/win_inventory`
+* Place your ansible-vault password to `credentials/ansible_vault_password`.
+* Place your windows login & password to `credentials/win_inventory`.
+* Modify `Vagrantfile` and enter your username and update link to github public key.
+* Add correct values in `host.yml` & `guest.yml`.
+* Execute `vagrant up` in project dir and see how magic happenes.

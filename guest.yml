@@ -4,8 +4,14 @@
   hosts: localhost
   connection: local
   become: yes
-#  become_user: jaels
-  vars_files: [ 'roles/guest/vars/personal.yml' ]
+  vars:
+    username: jaels
+    git_fullname: "Yurii Fisakov"
+    git_email: "fisakov.root@gmail.com"
+    users:
+      - username: "{{ username }}"
+    ntp_timezone: Europe/Kiev
+
 
   roles:
     - geerlingguy.ntp
