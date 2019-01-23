@@ -3,7 +3,7 @@ bootstrap = <<SCRIPT
   mkdir /home/jaels/.ssh && curl --silent https://github.com/renderqwerty.keys >> /home/jaels/.ssh/authorized_keys
   echo "%jaels ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/jaels
   su -c "printf 'cd /home/jaels\nsudo su jaels' >> .bash_profile" -s /bin/sh vagrant
-  apt install python-setuptools -y
+  apt update -y && apt install python-setuptools python-pip -y
 SCRIPT
 
 Vagrant.configure("2") do |config|
@@ -31,9 +31,9 @@ Vagrant.configure("2") do |config|
         ansible.verbose = true
       end
       config.vm.provision "ansible_host", type: "ansible_local" do |ansible_host|
-          ansible_host.playbook = "host.yml"
-          ansible_host.inventory_path = "credentials/win_inventory"
-          ansible_host.limit = 'all,localhost'
-          ansible_host.verbose = true
+        ansible_host.playbook = "host.yml"
+        ansible_host.inventory_path = "credentials/win_inventory"
+        ansible_host.limit = 'all,localhost'
+        ansible_host.verbose = true
       end
   end
