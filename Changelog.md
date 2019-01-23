@@ -9,7 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
  - Changelog
  - Examples of ansible inventory for different environments
 ### Changed
- - Repo was cleaned from tras.
+ - Repo was cleaned from trash
  - Readme was updated
 ### Removed
- - winscp was removed. I recently switched to [xshell](https://www.netsarang.com/en/xshell/).
+ - winscp was removed. I recently switched to [xshell](https://www.netsarang.com/en/xshell/)
+ 
