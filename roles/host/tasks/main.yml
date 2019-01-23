@@ -13,4 +13,4 @@
 - name: copy gitconfig
   win_copy:
     src: "/home/{{ lin_username }}/.gitconfig"
-    dest: "C:\\Users\\{{ username }}\\"
+    dest: "C:\\Users\\{{ win_username }}\\"
