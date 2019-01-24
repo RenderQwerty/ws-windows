@@ -22,3 +22,4 @@ choco_list:
   - kubernetes-cli
   - zoom
   - minikube
+  - shellcheck
