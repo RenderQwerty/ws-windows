@@ -19,3 +19,6 @@ choco_list:
   - steam
   - teamviewer
   - keepass
+  - kubernetes-cli
+  - zoom
+  - minikube
